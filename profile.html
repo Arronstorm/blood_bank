@@ -48,34 +48,34 @@
         </div>
 
         <div id="id01" class="modal">
-            <form class="modal-content animate" method="post" onsubmit="edit()" action="userinterf.html">
+            <form class="modal-content animate" method="post" onsubmit="edit()" action="profile.html">
               <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
           
               <div class="container">
               <br>
-              <p class="heading">Edit your Profile details Details</p>
+              <p class="heading">Edit your Profile Details</p>
               <br>
               <div class="table">
                 <table class="tableval">
                     <tr>
                         <td class="hospval">Hospital Name</td>
-                        <td><input type="text" placeholder="Hospital Name" id="hospname-txtop"></td>
+                        <td><input type="text" placeholder="Hospital Name" id="hospnametxtop"></td>
                     </tr>
                     <tr>
                         <td class="addressval">Address</td>
-                        <td><textarea type="text" placeholder="Address" id="address-txtpo" rows="4" cols="33"></textarea></td>
+                        <td><textarea type="text" placeholder="Address" id="addresstxtop" rows="4" cols="33"></textarea></td>
                     </tr>
                     <tr>
                         <td class="mobval">Mobile</td>
-                        <td><input type="number" placeholder="Mobile Number" id="mobile-txtpo"></td>
+                        <td><input type="number" placeholder="Mobile Number" id="mobiletxtop"></td>
                     </tr>
                         <td class="cityval">City</td>
-                        <td><input type="text" placeholder="City" id="city-txtpo"></td>
+                        <td><input type="text" placeholder="City" id="citytxtop"></td>
                     </tr>
                     <tr>
                         <td>State</td>
-                        <td><input type="text" placeholder="State" id="state-txtpo"></td>
+                        <td><input type="text" placeholder="State" id="statetxtop"></td>
                     </tr>
                 </table>
                 </div>
@@ -88,9 +88,9 @@
             </form>
           </div>
 
-        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>  
-        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>       
-        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>  
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>       
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
         <script>
             var firebaseConfig = {
                 apiKey: "AIzaSyCrIWqNU2kdSahiutpp9m1uDJD7v8tRiaw",
@@ -107,44 +107,3 @@
         <script src="assets/script/profile.js"></script>
     </body>
 </html>
-
-
-<!--
-    <form class="modal-content animate" method="post" onsubmit="fnedit()" action="">
-      <div class="imgcontainer">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
-      <div class="container">
-      <br>
-      <p>Enter The Blood Quantity Details</p>
-      <br>
-      <div class="table">
-        <table class="tableval">
-            <tr>
-              <td class="hospval">Hospital Name</td>
-              <td><input type="text" placeholder="Hospital Name" id="hospname-txtop"></td>
-            </tr>
-            <tr>
-              <td class="addressval">Address</td>
-              <td><input type="text" placeholder="Address" id="address-txtpo"></td>
-          </tr>
-          <tr>
-              <td class="mobval">Mobile</td>
-              <td><input type="number" placeholder="Mobile Number" id="mobile-txtpo"></td>
-            </tr>
-            <tr>
-              <td class="cityval">City</td>
-              <td><input type="text" placeholder="City" id="city-txtpo"></td>
-          </tr>
-          <tr>
-              <td>State</td>
-              <td><input type="text" placeholder="State" id="state-txtpo"></td>
-            </tr>
-        </table>
-        </div>
-      </div>
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="submit" class="addbutton" id="addblood" onkeypress="fnedit()">Add</button>
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      </div>
-    </form>
--->

@@ -7,7 +7,6 @@ firebase.auth().onAuthStateChanged(user => {
     }
 })
 
-
 var ref = firebase.database().ref("hospitalsandbloodbanks");
 
 ref.on("value", function(snapshot) {
@@ -15,7 +14,7 @@ ref.on("value", function(snapshot) {
     function(childSnapshot) {
       var childData = childSnapshot.val();
       var id=childData.id;
-    
+      
       if (userId == id) {
         hospnameip = childData.hospital_or_bloodbank_name;
         addressip = childData.address;
@@ -89,19 +88,19 @@ window.onclick = function(event) {
     }
 }
 
-function fnedit() {
-  var hospnameval = document.getElementById("hospname-txtpo").value;
-  var addressval = document.getElementById("address-txtpo").value;
-  var mobilenoval = document.getElementById("mobile-txtpo").value;
-  var cityval = document.getElementById("city-txtpo").value;
-  var stateval = document.getElementById("state-txtpo").value;
+function edit() {
+  var hospnameval = document.getElementById("hospnametxtop").value;
+  var addressval = document.getElementById("addresstxtop").value;
+  var mobilenoval = document.getElementById("mobiletxtop").value;
+  var cityval = document.getElementById("citytxtop").value;
+  var stateval = document.getElementById("statetxtop").value;
 
   firebase.database().ref("hospitalsandbloodbanks/" + userId).update({
     hospital_or_bloodbank_name: hospnameval,
     address: addressval,
     mobile: mobilenoval,
     city: cityval,
-    state: stateval,
+    state: stateval
   });
   alert("saved");
   alert("if error occurs go to the previous page");
