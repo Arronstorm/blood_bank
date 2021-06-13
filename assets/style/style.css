@@ -1,3 +1,7 @@
+* {
+    overflow-x: hidden;
+}
+
 body{
     margin:0px auto;
     width: 100%;
@@ -20,6 +24,7 @@ nav {
     border-radius: 10px;
     position: fixed;
     width: 98.7%;
+    overflow-y: hidden;
 } 
 .sidebarlog  ul li{
     list-style-type:none;
@@ -68,6 +73,69 @@ nav {
     background: rgba(0,0,0,0.2);
     border-radius: 10px;
 }
+
+.aboutinner {
+    display: table-cell;
+    vertical-align: middle;
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    width: 100%;
+}
+.leftallign {
+    width: 50%;
+    float: left;
+}
+
+.leftallign h1 {
+    font-size: 35px;
+    position: relative;
+    top: 53px;
+}
+
+.leftallign p {
+    font-size: 20px;
+}
+
+.rightallign {
+    width: 80%;
+    float: right;
+    position: relative;
+    left: 35%;
+    bottom: 10%;
+}
+
+.final {
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.contact {
+    padding-left: 70px;
+}
+
+.final1 {
+    position: relative;
+    bottom: 120px;
+    left: 500px;
+}
+
+.links {
+    position: relative;
+    bottom: 120px;
+    left: 530px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #eff3c6;
+}
+
+.rights {
+    font-size: 12px;
+    position: relative;
+    left: 650px;
+}
+
 .home .inner h1 {
     font-size: 60px;
 }
@@ -76,7 +144,7 @@ nav {
 }
 .about{
     display: table;
-    height: 100vh;
+    height: 50vh;
     width:100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -136,7 +204,7 @@ button:hover {
 }
 .last {
 	display: table;
-    height: 30vh;
+    height: 30px;
     width: 100%;
 	background-color: #ec5858;
 	color: cornsilk;
@@ -213,7 +281,7 @@ button:hover {
   background-color: #111;
   color: white;
   cursor: pointer;
-  width: 30px;
+  width: 40px;
   height: 30px;
   border-radius: 5px;
 }

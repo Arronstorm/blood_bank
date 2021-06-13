@@ -21,6 +21,7 @@ ref1.on("value", function(snapshot) {
         var childData = childSnapshot.val();
         var id=childData.id;
         
+        alert(id)
         if(userId == id) {
             hospname = childData.hospital_or_bloodbank_name;
         }
@@ -35,7 +36,7 @@ function select(){
             var name = childData.name;
             var phone = childData.phone_no;
             var blood = childData.blood_grp;
-            var resp = childData.accept_reject;
+            var resp = childData.accept;
             var hospitalname = childData.hosp_name;
             if (hospname == hospitalname) {
                 
@@ -66,9 +67,9 @@ function addItems(name,phone,blood,resp) {
     acc.onclick = function acceptval() {
         btnno = event.srcElement.id;
         respArray[btnno] = 'deaccept';
-        var x = "Accept";
+        var x = "true";
         firebase.database().ref('request/' + hospname).update({
-            accept_reject: x
+            accept: x
         });
     }
     acc.style.backgroundColor = "rgb(0, 169, 0)";
