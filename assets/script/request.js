@@ -1,9 +1,3 @@
-var nameArray = new Array();
-var phoneArray = new Array();
-var bloodArray = new Array();
-var respArray = new Array();
-var buttonArray = new Array();
-
 var userId;
 var hospname;
 var btnno;
@@ -20,8 +14,6 @@ ref1.on("value", function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
         var childData = childSnapshot.val();
         var id=childData.id;
-        
-        alert(id)
         if(userId == id) {
             hospname = childData.hospital_or_bloodbank_name;
         }
@@ -32,15 +24,14 @@ ref1.on("value", function(snapshot) {
 function select(){
     ref2.once('value', function(snapshot) {
         snapshot.forEach(function(childSnapshot) {
+            var hosp_name = childSnapshot.key;
             var childData = childSnapshot.val();
             var name = childData.name;
             var phone = childData.phone_no;
             var blood = childData.blood_grp;
             var resp = childData.accept;
-            var hospitalname = childData.hosp_name;
-            if (hospname == hospitalname) {
-                
-                nameArray.push(name);phoneArray.push(phone);bloodArray.push(blood);respArray.push(resp);
+            
+            if(hospname == hosp_name) {
                 addItems(name,phone,blood,resp);                    
             }
         });
@@ -66,8 +57,8 @@ function addItems(name,phone,blood,resp) {
     acc.id = trowid;
     acc.onclick = function acceptval() {
         btnno = event.srcElement.id;
-        respArray[btnno] = 'deaccept';
         var x = "true";
+        alert(hospname);
         firebase.database().ref('request/' + hospname).update({
             accept: x
         });
@@ -81,11 +72,9 @@ function addItems(name,phone,blood,resp) {
     acc.style.fontWeight = "650";
     
     var del = document.createElement('button');
-    buttonArray.push(trowid);
     del.id = trowid++;
     del.onclick = function deleteval() {
         btnno = event.srcElement.id;
-        alert(btnno);
         firebase.database().ref('request/' + hospname).remove();
     }
     del.style.backgroundColor = "rgb(255, 24, 24)";

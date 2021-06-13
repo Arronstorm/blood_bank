@@ -27,13 +27,12 @@ function select(){
         snapshot.forEach(function(childSnapshot) {
             var childData = childSnapshot.val();
             var name = childData.name;
-            var phone = childData.phone_no;
             var blood = childData.blood_grp;
             var date = childData.appointment_date;
             var time = childData.appointment_time;
-            var hospitalname = childData.hosp_name;
+            var hospitalname = childSnapshot.key;
             if (hospname == hospitalname) {
-                addItems(name,phone,blood,date,time);                    
+                addItems(name,blood,date,time);                    
             }
         });
     });
@@ -43,13 +42,12 @@ window.onload = select;
 
 var sl = 0;
 var trowid = 0;
-function addItems(name,phone,blood,date,time) {
+function addItems(name,blood,date,time) {
     
     var tbody = document.getElementById('tbody1');
     var trow = document.createElement('tr');
     var slno = document.createElement('td');
     var nameop = document.createElement('td');
-    var phoneop = document.createElement('td');
     var bloodop = document.createElement('td');
     var dateop = document.createElement('td');
     var timeop = document.createElement('td');
@@ -120,7 +118,6 @@ function addItems(name,phone,blood,date,time) {
 
     slno.innerHTML = ++sl;
     nameop.innerHTML = name;
-    phoneop.innerHTML = phone;
     bloodop.innerHTML = blood;
     dateop.innerHTML = date;
     timeop.innerHTML = time;
@@ -131,7 +128,6 @@ function addItems(name,phone,blood,date,time) {
     
     trow.appendChild(slno);
     trow.appendChild(nameop);
-    trow.appendChild(phoneop);
     trow.appendChild(bloodop);
     trow.appendChild(dateop);
     trow.appendChild(timeop);
