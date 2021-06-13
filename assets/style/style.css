@@ -133,6 +133,7 @@ nav {
 .rights {
     font-size: 12px;
     position: relative;
+    top: 55px;
     left: 650px;
 }
 
@@ -204,7 +205,7 @@ button:hover {
 }
 .last {
 	display: table;
-    height: 30px;
+    height: 220px;
     width: 100%;
 	background-color: #ec5858;
 	color: cornsilk;
