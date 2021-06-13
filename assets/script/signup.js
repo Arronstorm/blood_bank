@@ -6,7 +6,7 @@ function formSubmit(e) {
     document.getElementById('registrationform').reset();
 }
 
-function sendMessage(userid, hosporbb, hosporbbname, mainemail, address, city, state, location, mobile, aplus, aminus, bplus, bminus, oplus, ominus, abplus, abminus) {
+function sendMessage(userid, hosporbb, hosporbbname, mainemail, address, city, state, location, mobile, time, aplus, aminus, bplus, bminus, oplus, ominus, abplus, abminus) {
     firebase
         .database()
         .ref("hospitalsandbloodbanks/" + userid)
@@ -20,6 +20,7 @@ function sendMessage(userid, hosporbb, hosporbbname, mainemail, address, city, s
             state: state,
             location: location,
             mobile: mobile,
+            donation_timing: time,
             quantity_apositive: aplus,
             quantity_anegative: aminus,
             quantity_bpositive: bplus,
@@ -79,7 +80,8 @@ function save(){
                 if (user) {
                     var uid = user.uid;
                     var loc = "ni";
-                    sendMessage(uid, hosporbb, hosporbbname, ema, addrs, cit, stat, loc, mob, aplus, aminus, bplus, bminus, oplus, ominus, abplus, abminus);
+                    var time = "9:00 AM - 6:00 PM";
+                    sendMessage(uid, hosporbb, hosporbbname, ema, addrs, cit, stat, loc, mob, time, aplus, aminus, bplus, bminus, oplus, ominus, abplus, abminus);
                     window.location.href = "index.html";
                 }
             });
