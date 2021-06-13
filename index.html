@@ -1,0 +1,102 @@
+<!DOCTYPE html> <!-- HTML5 Format -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Blood Bank Management System</title>
+        <link rel="icon" href="assets/Images/blood-drop.svg" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="main">
+            <nav>
+                <ul class="sidepan">
+                    <li class="sidepane">
+                        <div>
+                            <button class="openbtn" onclick="openNav()">☰</button>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <form action="login.html">
+                            <button class="loginbtn">Login</button>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="signup.html">
+                            <button class="signupbtn">Sign Up</button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <br>
+            </div>
+            <section>
+                <section class="home">
+                    <div class="inner">
+                        <h1>Blood Bank Management</h1>
+                        <h2>System</h2>
+                    </div>
+                </section>
+                <div class="last" id="contact">
+                    <h4 style="padding-left:5px;">Contact Us</h4>
+                    <p class="contact" style="padding-left: 10px">
+                        Phone No:- 1234567890<br>
+                        Email:- banckblood@gmail.com
+                    </p>                
+                </div>
+            </section>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <div class="sidebarlog">
+                    <ul>
+                        <li>
+                            <form action="login.html">
+                                <button class="loginbtn1">Login</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="signup.html">
+                                <button class="signupbtn1">Sign Up</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#about">About</a>
+                <a href="#">Features</a>
+                <a href="#">Clients</a>
+                <a href="#contact">Contact</a>
+                
+            </div>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top" class="mybutton">^</button>
+        <script>
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            }       
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            }
+            else {
+                mybutton.style.display = "none";
+            }
+        }
+        </script>
+    </body>
+</html>

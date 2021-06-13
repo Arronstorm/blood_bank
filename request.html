@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- HTML5 Format -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Request List</title>
+        <link rel="icon" href="assets/Images/blood-drop.svg" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="assets/style/request.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="top-body">
+            <p class="profile">Request</p>
+        </div>
+        <div class="bottom-body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sl No</th>
+                        <th>Name</th>
+                        <th>Phone No</th>
+                        <th>Blood Group</th>
+                        <th>Response</th>
+                        <th>Accept</th>
+                        <th>Reject</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody1">
+                   
+                </tbody>
+            </table>
+            <br>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>  
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>       
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyCrIWqNU2kdSahiutpp9m1uDJD7v8tRiaw",
+                authDomain: "bankblood-101.firebaseapp.com",
+                databaseURL: "https://bankblood-101-default-rtdb.firebaseio.com",
+                projectId: "bankblood-101",
+                storageBucket: "bankblood-101.appspot.com",
+                messagingSenderId: "631408157440",
+                appId: "1:631408157440:web:876eb7502be4e9836949e5",
+                measurementId: "G-2M1V7VXR54"
+        };
+        firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="assets/script/request.js"></script>
+    </body>
+</html>

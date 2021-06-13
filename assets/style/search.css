@@ -1,0 +1,164 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+  }
+
+body {
+    margin-top: 5px;
+    background-color: rgba(0, 0, 0, 0.801);
+}
+
+nav {
+    height: 130px;
+    background-color: rgb(24, 24, 24); 
+    border-radius: 10px;
+    position: fixed;
+    width: 99%;
+}
+
+.heading {
+    color: aliceblue;
+    font-weight: 650;
+    font-size: 50px;
+    position: relative;
+    bottom: 80px;
+    right: 450px;
+}
+
+.input {
+    position: relative;
+    bottom: 150px;
+}
+
+.search-bar {
+    position: relative;
+    top: 31px;
+    left: 36%;
+}
+
+#Hospbbname {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#cityname{
+    width: 20%;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#hospitalorbloodbank {
+    width: 200px;
+    height: 34px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+#bloodtype {
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.search {
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    opacity: 1;
+    background-image: linear-gradient(to bottom right, rgb(255, 79, 79) , rgba(51, 51, 51, 0.699));
+    transition: 0.3s;
+    color: cornsilk;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+button {
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    opacity: 1;
+    background-image: linear-gradient(to bottom right, rgb(255, 79, 79) , rgba(51, 51, 51, 0.699));
+    transition: 0.3s;
+    color: cornsilk;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+button:hover {
+    opacity: 0.8;
+    background-image: linear-gradient(to bottom right,  rgba(51, 51, 51, 0.699), rgb(255, 79, 79));
+}
+
+input:focus ,select:focus,button:focus {
+    outline: none;
+}
+
+.container {
+    position: relative;
+    top: 140px;
+    overflow-y: auto;
+    height: 610px;
+}
+
+.search-op {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+li {
+    list-style-type:none;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+td {
+    padding-top: 5px;
+    padding-left: 30px;
+}
+
+th {
+    padding-top: 5px;
+    padding-left: 30px;
+    text-align: center;
+}
+
+.list {
+    background-color: rgb(75, 75, 75);
+    border-radius: 10px;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    color: aliceblue;
+}
+
+hr {
+    width: 1350px;
+    height: 2px;
+    position: relative;
+    right: 20px;
+    background-color: black;
+}
+
+/*for the scroll bar inside the browswer*/
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d4d4d4;
+    border-radius: 10px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: rgb(87, 87, 87);
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(105, 105, 105);
+}

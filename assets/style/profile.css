@@ -1,0 +1,234 @@
+body {
+  margin: 0px;
+  background-color:rgba(0, 0, 0, 0.801);
+  overflow-x: hidden;    
+}
+
+.top-body {
+  background-color: rgb(20, 20, 20);
+  position: relative;
+  top: 0px;
+  position: fixed;
+  margin-top: 0px;
+  width: 100%;
+  height: 200px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;    
+}
+
+.profile {
+  position: relative;
+  top: 40%;
+  left: 25%;
+  color: white;
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;    
+}
+
+#avatar {
+  position: relative;
+  bottom: 4%;
+  left: 12%;
+  border-radius: 10px;    
+}
+
+.bottom-body {
+  width: 550px;
+  position: relative;
+  top: 265px;
+  left: 25%;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;    
+}
+
+.bottom-body-output {
+  width: 759px;
+  position: relative;
+  left: 50%;
+  top: 0px;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;   
+}
+
+#hospital-name,#address,#email,#mobile,#city,#state {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: aliceblue;
+}
+
+#hospital-name-op,#address-op,#email-op,#mobile-op,#city-op,#state-op {
+  padding-top: 5px;
+  padding-bottom: 5px;  
+  color: aliceblue;
+}
+
+.editbutton{
+  position: relative;
+  bottom: 125px;
+  left: 70%;
+  font-weight: 510;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #333;
+  color: beige;
+  width: 180px;        
+  height: 55px;
+}
+
+.editbutton:hover {
+  background-color: rgba(0, 0, 0, 0.685);
+  color: rgba(245, 245, 220, 0.678);
+}
+  
+.editimg {
+  width: 20px;
+  height: 20px;
+  color: white;
+  position: relative;
+  top: 3px;
+}
+
+.details {
+  width: 1130px;
+}
+  
+.tableval{
+  margin: 0 auto;
+}
+
+.hospval, .addressval, .mobval, .cityval, .number {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+    
+
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;    
+  outline: none;
+}
+  
+.addbutton {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  border-radius: 10px;
+  font-weight: 570;   
+}  
+  
+.addbutton:hover,.cancelbtn:hover {
+  opacity: 0.8;
+}  
+  
+.cancelbtn {
+  width: 40%;
+  padding: 14px 20px;
+  background-color: #f44336;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 670;
+}      
+  
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+  
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+  
+.container {
+  padding: 16px;
+}
+  
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow-y: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;     
+}
+  
+  
+.modal-content {
+  background-color: rgb(112, 112, 112);
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+}
+  
+.heading {
+  font-size: 25px;
+  font-weight: 600;
+}
+ 
+.close {
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  position: absolute;
+}  
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+  
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+textarea {
+  border-radius: 10px;
+  outline: none;
+}
+
+input:hover, textarea:hover {
+  outline: none;
+}

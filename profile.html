@@ -1,0 +1,150 @@
+<!DOCTYPE html> <!-- HTML5 Format -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Profile</title>
+        <link rel="icon" href="assets/Images/blood-drop.svg" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="assets/style/profile.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="top-body">
+            <p class="profile">Profile</p>
+            <img alt="Avatar" id="avatar">
+            <button class="editbutton" id="open" onclick="document.getElementById('id01').style.display='block'">
+                <img class="editimg" src="assets/Images/edit.svg">  Edit Profile
+            </button>
+        </div>
+        <div class="bottom-body">
+            <table class="details">
+                <tr>
+                    <td><p id="hospital-name">Hospital/Blood Bank Name</p></td>
+                    <td><p id="hospital-name-op"></p></td>
+                </tr>
+                <tr>
+                    <td><p id="address">Address</p></td>
+                    <td><p id="address-op"></p></td>
+                </tr>
+                <tr>
+                    <td><p id="email">Email</p></td>
+                    <td><p id="email-op"></p></td>
+                </tr>
+                <tr>
+                    <td><p id="mobile">Mobile</p></td>
+                    <td><p id="mobile-op"></p></td>
+                </tr>
+                <tr>
+                    <td><p id="city">City</p></td>
+                    <td><p id="city-op"></p></td>
+                </tr>
+                <tr>
+                    <td><p id="state">State</p></td>
+                    <td><p id="state-op"></p></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="id01" class="modal">
+            <form class="modal-content animate" method="post" onsubmit="edit()" action="userinterf.html">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+          
+              <div class="container">
+              <br>
+              <p class="heading">Edit your Profile details Details</p>
+              <br>
+              <div class="table">
+                <table class="tableval">
+                    <tr>
+                        <td class="hospval">Hospital Name</td>
+                        <td><input type="text" placeholder="Hospital Name" id="hospname-txtop"></td>
+                    </tr>
+                    <tr>
+                        <td class="addressval">Address</td>
+                        <td><textarea type="text" placeholder="Address" id="address-txtpo" rows="4" cols="33"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="mobval">Mobile</td>
+                        <td><input type="number" placeholder="Mobile Number" id="mobile-txtpo"></td>
+                    </tr>
+                        <td class="cityval">City</td>
+                        <td><input type="text" placeholder="City" id="city-txtpo"></td>
+                    </tr>
+                    <tr>
+                        <td>State</td>
+                        <td><input type="text" placeholder="State" id="state-txtpo"></td>
+                    </tr>
+                </table>
+                </div>
+              </div>
+          
+              <div class="container" >
+                <button type="submit" class="addbutton" id="addblood">Add</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              </div>
+            </form>
+          </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>  
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>       
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyCrIWqNU2kdSahiutpp9m1uDJD7v8tRiaw",
+                authDomain: "bankblood-101.firebaseapp.com",
+                databaseURL: "https://bankblood-101-default-rtdb.firebaseio.com",
+                projectId: "bankblood-101",
+                storageBucket: "bankblood-101.appspot.com",
+                messagingSenderId: "631408157440",
+                appId: "1:631408157440:web:876eb7502be4e9836949e5",
+                measurementId: "G-2M1V7VXR54"
+        };
+        firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="assets/script/profile.js"></script>
+    </body>
+</html>
+
+
+<!--
+    <form class="modal-content animate" method="post" onsubmit="fnedit()" action="">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+      <div class="container">
+      <br>
+      <p>Enter The Blood Quantity Details</p>
+      <br>
+      <div class="table">
+        <table class="tableval">
+            <tr>
+              <td class="hospval">Hospital Name</td>
+              <td><input type="text" placeholder="Hospital Name" id="hospname-txtop"></td>
+            </tr>
+            <tr>
+              <td class="addressval">Address</td>
+              <td><input type="text" placeholder="Address" id="address-txtpo"></td>
+          </tr>
+          <tr>
+              <td class="mobval">Mobile</td>
+              <td><input type="number" placeholder="Mobile Number" id="mobile-txtpo"></td>
+            </tr>
+            <tr>
+              <td class="cityval">City</td>
+              <td><input type="text" placeholder="City" id="city-txtpo"></td>
+          </tr>
+          <tr>
+              <td>State</td>
+              <td><input type="text" placeholder="State" id="state-txtpo"></td>
+            </tr>
+        </table>
+        </div>
+      </div>
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="submit" class="addbutton" id="addblood" onkeypress="fnedit()">Add</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+-->

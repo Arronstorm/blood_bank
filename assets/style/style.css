@@ -1,0 +1,222 @@
+body{
+    margin:0px auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.801);
+    font-family: 'Ubuntu', sans-serif;
+}
+nav ul li {
+    list-style-type:none;
+    float: left;
+    padding-right: 2.5em;
+    color:#eff3c6;
+    font-family: sans-serif;
+}
+nav ul{
+    float: right;   
+}
+nav {
+    height: 70px;
+    background-color: #ec5858; 
+    border-radius: 10px;
+    position: fixed;
+    width: 98.7%;
+} 
+.sidebarlog  ul li{
+    list-style-type:none;
+    float: left;
+    padding: 5px;
+    color:#818181;
+    font-family: sans-serif; 
+}
+
+.loginbtn1 {
+    background-color: #111;
+    color: #818181;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.signupbtn1{
+    background-color: #111;
+    color: #818181;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.home{
+    background-image: url('https://www.thehealthy.com/wp-content/uploads/2019/01/Heres-What-Happens-to-Your-Blood-After-You-Donate-It-3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size:48px;;
+    display: table;
+    height: 100vh;
+    width: 100%;
+    border-radius: 10px;
+}
+.inner{
+    display: table-cell;
+    vertical-align: middle;
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+.home .inner h1 {
+    font-size: 60px;
+}
+.home .inner h2 {
+    font-size: 50px;
+}
+.about{
+    display: table;
+    height: 100vh;
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.about .inners{
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+    padding-top: 75px;
+    padding-left: 50px;
+}
+.about .inners h1{
+    font-size: 42px;;
+}
+.about .inners p{
+    padding-left: 25px;
+    padding-right: 5px;
+    font-size: 28px;
+    text-align: justify;
+}
+.images{
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+}
+.image{
+    padding: 20px;
+    padding-right: 100px; 
+    padding-bottom: 100px;
+    padding-top: 70px;
+}
+.loginbtn {
+    background-color: #111;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.signupbtn {
+    background-color: #111;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.usersel {
+    text-align: center;
+}
+button:hover {
+    opacity: 0.8;
+}
+.last {
+	display: table;
+    height: 30vh;
+    width: 100%;
+	background-color: #ec5858;
+	color: cornsilk;
+    border-radius: 10px;
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 6px 15px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+}
+.openbtn:hover {
+    background-color: #444;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 10px;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.sidepan {
+    float: left;
+}
+.sidepan li {
+    padding: 0px;
+}
+.mybutton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #111;
+  color: white;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+#myBtn:hover {
+  background-color: rgb(53, 51, 51);
+}

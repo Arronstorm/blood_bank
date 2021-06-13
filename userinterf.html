@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="icon" href="assets/Images/blood-drop.svg" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="assets/style/userinterf.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="topnav" style="z-index: 2;">
+            <div class="id_section">
+                <img alt="Avatar" id="avatar">
+            </div>
+        </div>
+        <div class="sidenav">
+            <div class="section">
+                <a href="donate.html" class="donate">Donate</a>
+                <a href="request.html" class="req">Request</a>
+                <a href="search.html" class="search">Search for Blood</a>
+                <a href="profile.html" class="prof">Profile</a>
+                <button onclick="logout()" class="logout">Logout</button>
+            </div>
+        </div>
+            <p class="greetings" id="greetingtext"></p>
+            <p class="greetings2">Quantity of Each BloodGroup</p>
+            <button class="editbutton" onclick="document.getElementById('id01').style.display='block'">
+                <img class="editimg" src="assets/Images/edit.svg">Edit Blood Quantity
+            </button>
+        <div class="mainbox">
+            <div class="box1">
+                <h4 class="text1">A+</h4>
+                <p id="ap"></p>
+            </div>
+            <div class="box2">
+                <h4 class="text2">B+</h4>
+                <p id="bp"></p>
+            </div>
+            <div class="box3">
+                <h4 class="text3">O+</h4>
+                <p id="op"></p>
+            </div>
+            <div class="box4">
+                <h4 class="text4">AB+</h4>
+                <p id="abp"></p>
+            </div>
+        </div>
+        <div class="mainbox_2">
+            <div class="box1">
+                <h4 class="text1">A-</h4>
+                <p id="an"></p>
+            </div>
+            <div class="box2">
+                <h4 class="text2">B-</h4>
+                <p id="bn"></p>
+            </div>
+            <div class="box3">
+                <h4 class="text3">O-</h4>
+                <p id="on"></p>
+            </div>
+            <div class="box4">
+                <h4 class="text4">AB-</h4>
+                <p id="abn"></p>
+            </div>
+        </div>
+
+        <div id="id01" class="modal">
+            <form class="modal-content animate" method="post" onsubmit="edit()" action="userinterf.html">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+          
+              <div class="container">
+              <br>
+              <p class="heading">Enter The Blood Quantity Details</p>
+              <br>
+              <div class="table">
+                <table class="tableval">
+                    <tr>
+                      <td>A+</td>
+                      <td>A-</td>
+                  </tr>
+                  <tr>
+                      <td><input type="number" placeholder="Quantity of A+" id="aplus"></td>
+                      <td><input type="number" placeholder="Quantity of A-" id="aminus"></td>
+                  </tr>
+                  <tr>
+                      <td>B+</td>
+                      <td>B-</td>
+                  </tr>
+                  <tr>
+                      <td><input type="number" placeholder="Quantity of B+" id="bplus"></td>
+                      <td><input type="number" placeholder="Quantity of B-" id="bminus"></td>
+                  </tr>
+                  <tr>
+                      <td>O+</td>
+                      <td>O-</td>
+                  </tr>
+                  <tr>
+                      <td><input type="number" placeholder="Quantity of O+" id="oplus"></td>
+                      <td><input type="number" placeholder="Quantity of O-" id="ominus"></td>
+                  </tr>
+                  <tr>
+                      <td>AB+</td>
+                      <td>AB-</td>
+                  </tr>
+                  <tr>
+                      <td><input type="number" placeholder="Quantity of AB+" id="abplus"></td>
+                      <td><input type="number" placeholder="Quantity of AB-" id="abminus"></td>
+                  </tr>
+                </table>
+                </div>
+              </div>
+          
+              <div class="container" >
+                <button type="submit" class="addbutton" id="addblood">Add</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              </div>
+            </form>
+          </div>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>  
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>       
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyCrIWqNU2kdSahiutpp9m1uDJD7v8tRiaw",
+                authDomain: "bankblood-101.firebaseapp.com",
+                databaseURL: "https://bankblood-101-default-rtdb.firebaseio.com",
+                projectId: "bankblood-101",
+                storageBucket: "bankblood-101.appspot.com",
+                messagingSenderId: "631408157440",
+                appId: "1:631408157440:web:876eb7502be4e9836949e5",
+                measurementId: "G-2M1V7VXR54"
+        };
+        firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="assets/script/userinterf.js"></script>
+        <button on></button>
+    </body>
+</html>
