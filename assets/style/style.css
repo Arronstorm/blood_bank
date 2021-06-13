@@ -1,20 +1,20 @@
 * {
     overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
     margin:0px auto;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.801);
-    font-family: 'Ubuntu', sans-serif;
 }
 nav ul li {
     list-style-type:none;
     float: left;
     padding-right: 2.5em;
     color:#eff3c6;
-    font-family: sans-serif;
 }
+
 nav ul{
     float: right;   
 }
@@ -29,7 +29,6 @@ nav {
 .sidebarlog  ul li{
     list-style-type:none;
     color:#818181;
-    font-family: sans-serif; 
 }
 
 .loginbtn1 {
