@@ -28,8 +28,6 @@ nav {
 } 
 .sidebarlog  ul li{
     list-style-type:none;
-    float: left;
-    padding: 5px;
     color:#818181;
     font-family: sans-serif; 
 }
@@ -37,23 +35,28 @@ nav {
 .loginbtn1 {
     background-color: #111;
     color: #818181;
-    padding: 10px;
     border: none;
     cursor: pointer;
     width: 100%;
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 50px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .signupbtn1{
     background-color: #111;
     color: #818181;
-    padding: 10px;
+    padding-bottom: 30px;
+    padding-left: 40px;
     border: none;
     cursor: pointer;
     width: 100%;
+    text-align: left;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .home{
