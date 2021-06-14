@@ -1,7 +1,7 @@
 function logout () {
   firebase.auth().signOut()
 }
-
+var s;
 var userId;
 
 firebase.auth().onAuthStateChanged((user) => {
