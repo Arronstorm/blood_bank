@@ -91,8 +91,6 @@ function addItems(name,blood,date,time) {
             time[0] = +time[0] % 12 || 12;
         }
         var edittime = time.join ('');
-        alert(x);
-        alert(edittime);
         
         if (x == '') {
             firebase.database().ref('donation/' + "1").update ({
