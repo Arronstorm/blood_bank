@@ -38,7 +38,7 @@ function select(){
 }
 
 window.onload = select;
-
+var userid = '1'
 var sl = 0;
 var trowid = 0;
 function addItems(name,phone,blood,resp) {
@@ -57,7 +57,8 @@ function addItems(name,phone,blood,resp) {
     acc.onclick = function acceptval() {
         btnno = event.srcElement.id;
         var x = "true";
-        firebase.database().ref('request/' + hospname).update({
+         
+        firebase.database().ref('request/' + userid).update({
             accept: x
         });
     }
@@ -71,9 +72,10 @@ function addItems(name,phone,blood,resp) {
     
     var del = document.createElement('button');
     del.id = trowid++;
+    var userid = '1' 
     del.onclick = function deleteval() {
         btnno = event.srcElement.id;
-        firebase.database().ref('request/' + "1").remove();
+        firebase.database().ref('request/' + userid).remove();
     }
     del.style.backgroundColor = "rgb(255, 24, 24)";
     del.style.borderRadius = "10px";
