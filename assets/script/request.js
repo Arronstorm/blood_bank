@@ -27,12 +27,10 @@ function select(){
             var childData = childSnapshot.val();
             var name = childData.name;
             var phone = childData.phone_no;
-            var blood = childData.blood;
+            var blood = childData.blood_grp;
             var resp = childData.accept;
             var hosp_name = childData.hosp_name;
-            alert(hospname);
             if(hospname == hosp_name) {
-                alert(hosp_name);
                 addItems(name,phone,blood,resp);                    
             }
         });
@@ -59,7 +57,6 @@ function addItems(name,phone,blood,resp) {
     acc.onclick = function acceptval() {
         btnno = event.srcElement.id;
         var x = "true";
-        alert(hospname);
         firebase.database().ref('request/' + hospname).update({
             accept: x
         });
