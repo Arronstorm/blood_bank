@@ -95,22 +95,22 @@ function addItems(name,blood,date,time) {
         alert(edittime);
         
         if (x == '') {
-            firebase.database().ref('donation/' + hospname).update ({
+            firebase.database().ref('donation/' + "1").update ({
                 appointment_date: date
             });
         }
         else {
-            firebase.database().ref('donation/' + hospname).update ({
+            firebase.database().ref('donation/' + "1").update ({
                 appointment_date: x
             });
         }
         if (y == '') {
-            firebase.database().ref('donation/' + hospname).update ({
+            firebase.database().ref('donation/' + "1").update ({
                 appointment_time: time
             });
         }
         else {
-            firebase.database().ref('donation/' + hospname).update ({
+            firebase.database().ref('donation/' + "1").update ({
                 appointment_time: edittime
             });
         }

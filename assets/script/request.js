@@ -73,7 +73,7 @@ function addItems(name,phone,blood,resp) {
     del.id = trowid++;
     del.onclick = function deleteval() {
         btnno = event.srcElement.id;
-        firebase.database().ref('request/' + hospname).remove();
+        firebase.database().ref('request/' + "1").remove();
     }
     del.style.backgroundColor = "rgb(255, 24, 24)";
     del.style.borderRadius = "10px";
