@@ -24,11 +24,11 @@ ref1.on("value", function(snapshot) {
 function select(){
     ref2.once('value', function(snapshot) {
         snapshot.forEach(function(childSnapshot) {
-            var hosp_name = childSnapshot.key;
+            var hosp_name = childData.hosp_name;
             var childData = childSnapshot.val();
             var name = childData.name;
             var phone = childData.phone_no;
-            var blood = childData.blood_grp;
+            var blood = childData.blood;
             var resp = childData.accept;
             
             if(hospname == hosp_name) {

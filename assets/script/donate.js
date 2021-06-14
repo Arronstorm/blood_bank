@@ -27,10 +27,10 @@ function select(){
         snapshot.forEach(function(childSnapshot) {
             var childData = childSnapshot.val();
             var name = childData.name;
-            var blood = childData.blood_grp;
+            var blood = childData.blood;
             var date = childData.appointment_date;
             var time = childData.appointment_time;
-            var hospitalname = childSnapshot.key;
+            var hospitalname = childData.hosp_name;
             if (hospname == hospitalname) {
                 addItems(name,blood,date,time);                    
             }

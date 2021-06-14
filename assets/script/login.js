@@ -1,12 +1,12 @@
-async function userlogin(e) {
+function userlogin(e) {
     e.preventDefault()
     const email = document.querySelector('#useremail')
     const password = document.querySelector('#userpass')
   
     try {
-        const result = await firebase.auth().signInWithEmailAndPassword(email.value, password.value)
+        const result = firebase.auth().signInWithEmailAndPassword(email.value, password.value)
         console.log(result)
-        alert("Successfully Logged In as user");
+        alert("Successfully Logged In");
         window.location.href = "userinterf.html";
     }
     catch(err) {
