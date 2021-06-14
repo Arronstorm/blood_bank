@@ -112,6 +112,8 @@ function addItems(name,blood,date,time) {
                 appointment_time: edittime
             });
         }
+
+        document.location.reload()
     }
 
     slno.innerHTML = ++sl;

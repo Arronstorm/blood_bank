@@ -61,6 +61,7 @@ function addItems(name,phone,blood,resp) {
         firebase.database().ref('request/' + userid).update({
             accept: x
         });
+        document.location.reload()
     }
     acc.style.backgroundColor = "rgb(0, 169, 0)";
     acc.style.borderRadius = "10px";
@@ -76,6 +77,7 @@ function addItems(name,phone,blood,resp) {
     del.onclick = function deleteval() {
         btnno = event.srcElement.id;
         firebase.database().ref('request/' + userid).remove();
+        document.location.reload()
     }
     del.style.backgroundColor = "rgb(255, 24, 24)";
     del.style.borderRadius = "10px";
