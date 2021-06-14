@@ -24,14 +24,15 @@ ref1.on("value", function(snapshot) {
 function select(){
     ref2.once('value', function(snapshot) {
         snapshot.forEach(function(childSnapshot) {
-            var hosp_name = childData.hosp_name;
             var childData = childSnapshot.val();
             var name = childData.name;
             var phone = childData.phone_no;
             var blood = childData.blood;
             var resp = childData.accept;
-            
+            var hosp_name = childData.hosp_name;
+            alert(hospname);
             if(hospname == hosp_name) {
+                alert(hosp_name);
                 addItems(name,phone,blood,resp);                    
             }
         });
