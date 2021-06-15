@@ -28,7 +28,7 @@ function select(){
             var name = childData.name;
             var phone = childData.phone_no;
             var blood = childData.blood_grp;
-            var resp = childData.accept;
+            var resp = childData.status;
             var hosp_name = childData.hosp_name;
             if(hospname == hosp_name) {
                 addItems(name,phone,blood,resp);                    
@@ -56,10 +56,10 @@ function addItems(name,phone,blood,resp) {
     acc.id = trowid;
     acc.onclick = function acceptval() {
         btnno = event.srcElement.id;
-        var x = "true";
+        var x = "Accept";
          
         firebase.database().ref('request/' + userid).update({
-            accept: x
+            status: x
         });
         document.location.reload()
     }
@@ -76,7 +76,10 @@ function addItems(name,phone,blood,resp) {
     var userid = '1' 
     del.onclick = function deleteval() {
         btnno = event.srcElement.id;
-        firebase.database().ref('request/' + userid).remove();
+        var v = "Reject";
+        firebase.database().ref('request/' + userid).update({
+            status: v
+        });
         document.location.reload()
     }
     del.style.backgroundColor = "rgb(255, 24, 24)";
