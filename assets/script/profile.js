@@ -104,4 +104,5 @@ function edit() {
   });
   alert("saved");
   alert("if error occurs go to the previous page");
+  history.back();
 }
