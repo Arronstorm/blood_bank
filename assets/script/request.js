@@ -56,7 +56,7 @@ function addItems(name,phone,blood,resp) {
     acc.id = trowid;
     acc.onclick = function acceptval() {
         btnno = event.srcElement.id;
-        var x = "Accept";
+        var x = "Accepted";
          
         firebase.database().ref('request/' + userid).update({
             status: x
@@ -76,7 +76,7 @@ function addItems(name,phone,blood,resp) {
     var userid = '1' 
     del.onclick = function deleteval() {
         btnno = event.srcElement.id;
-        var v = "Reject";
+        var v = "Rejected";
         firebase.database().ref('request/' + userid).update({
             status: v
         });
